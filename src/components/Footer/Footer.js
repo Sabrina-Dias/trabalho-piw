@@ -10,6 +10,7 @@ import {
     CommentCard,
     LoadMoreContainer
 } from './style.js';
+import { Link } from 'react-router-dom';
 
 import HamburguerImg from '../../assets/images/hamburguer.png';
 import UserImg from '../../assets/images/user-avatar.png';
@@ -70,7 +71,9 @@ const Footer = () => {
             </CommentsSection>
 
             <LoadMoreContainer>
-                <button>+</button>
+                <Link to="/comments">
+                    <button>+</button>
+                </Link>
             </LoadMoreContainer>
         </FooterContainer>
     );
