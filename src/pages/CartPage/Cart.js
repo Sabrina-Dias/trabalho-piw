@@ -2,6 +2,7 @@ import React from 'react';
 import { useCart } from '../../context/CartContext';
 import { Container, SectionTitle, OrdersGrid, OrderCard } from './style';
 import { FaTrash } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Cart = () => {
   const { cartItems, cartTotal, updateQuantity, removeFromCart } = useCart();
@@ -48,7 +49,9 @@ const Cart = () => {
 
       <div className='cart-summary'>
         <h2>Total: R$ {cartTotal.toFixed(2).replace('.', ',')}</h2>
-        <button className='checkout-button'>Finalizar Compra</button>
+        <Link to="/finalizar-compra" style={{ textDecoration: 'none' }}>
+          <button className='checkout-button'>Finalizar Compra</button>
+        </Link>
       </div>
     </Container>
   );

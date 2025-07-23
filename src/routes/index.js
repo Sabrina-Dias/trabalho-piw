@@ -9,7 +9,8 @@ import Register from '../pages/Register/Register';
 import Menu from '../pages/Menu/Menu';
 import Cart from '../pages/CartPage/Cart';
 import Footer from '../components/Footer/Footer';
-
+import Checkout from '../pages/Checkout/Checkout';
+import Comments from '../pages/Comments/Comments';
 
 const AppHeader = styled.header`
     padding: 1rem 4rem;
@@ -76,6 +77,8 @@ const AppRoutes = () => {
                 <Route path="/register" element={<Register />} />
                 <Route path="/cardapio" element={<AppLayout><Menu /></AppLayout>} />
                 <Route path="/carrinho" element={<AppLayout><Cart /></AppLayout>} />
+                <Route path="/comments" element={<AppLayout><Comments /></AppLayout>} />
+                <Route path="/finalizar-compra" element={<Checkout />} />
             </Routes>
         </Router>
     );

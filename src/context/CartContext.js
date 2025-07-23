@@ -35,6 +35,10 @@ export function CartProvider({ children }) {
     }
   };
 
+  const clearCart = () => {
+    setCartItems([]);
+  };
+
   const cartTotal = cartItems.reduce(
     (total, item) => total + parseFloat(item.price.replace(',', '.')) * item.quantity,
     0
@@ -47,6 +51,7 @@ export function CartProvider({ children }) {
     addToCart,
     removeFromCart,
     updateQuantity,
+    clearCart,
     cartTotal,
     itemCount,
   };
